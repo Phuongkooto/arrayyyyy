@@ -1,0 +1,38 @@
+
+
+// Nhập mảng số nguyên có từng giá trị và số phần tử từ bàn phím. tính trung bình cộng giá trị trong mảng
+
+package Arrayyy;
+
+import java.util.Scanner;
+
+public class BT_Tren_bang {
+    public static void main(String[] args) {
+        Scanner socan = new Scanner(System.in);
+        
+        // Nhập số phần tử của mảng
+        System.out.print("Nhap so phan tu cua Mang: ");
+        int n = socan.nextInt();
+        
+        // Khởi tạo mảng
+        int[] Mang = new int[n];
+        
+        // Nhập các phần tử của mảng
+        System.out.println("Nhap cac phan tu cua Mang:");
+        for (int i = 0; i < n; i++) {
+            Mang[i] = socan.nextInt();
+        }
+        
+        // Tính tổng các giá trị trong mảng
+        int tong = 0;
+        for (int i = 0; i < n; i++) {
+            tong += Mang[i];
+        }
+        
+        // Tính trung bình cộng
+        double trungBinh = (double) tong / n;
+        
+        // In kết quả ra màn hình
+        System.out.println("Trung Binh cong: " + trungBinh);
+    }
+}
